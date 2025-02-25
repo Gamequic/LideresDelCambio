@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Agrandir";
+  src: url("/fonts/Agrandir-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Breathing";
+  src: url("/fonts/Breathing.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-breathing {
+  font-family: "Breathing", sans-serif;
+}
+
+/* 🔘 Evita el Scroll Horizontal en toda la app */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Elimina el scroll horizontal */
+  width: 100vw;
+  background-color: #212529;
+}
+
+/* 🔘 Barra de navegación */
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 100;
+}
+
+.navbar button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 🎥 Sección de Video */
+.video-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Evita overflow innecesario */
+  width: 100vw;
+}
+
+/* 🔥 Solución para el scroll horizontal */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ajusta el video sin desbordar */
+}
+
+/* 🔽 Secciones de Contenido */
+.app-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100%; /* 🔥 Evita el desbordamiento */
+}
+
+.content-section, .video-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background: #212529;
+  scroll-snap-align: start;
+  width: 100vw;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay .mainTitle {
+  font-size: 12rem;
+  text-align: left;
+}
+
+.overlay .TitleCambio {
+  font-size: 12rem;
+  text-align: right;
+}
