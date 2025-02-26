@@ -109,16 +109,14 @@ video {
   align-items: center;
   color: white;
   text-align: center;
-  font-size: 2rem;
   background: rgba(0, 0, 0, 0.5);
+  gap: 24px;
 }
 
 .overlay .mainTitle {
-  font-size: 12rem;
   text-align: left;
 }
 
 .overlay .TitleCambio {
-  font-size: 12rem;
   text-align: right;
 }
