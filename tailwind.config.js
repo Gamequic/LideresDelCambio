@@ -13,6 +13,6 @@ export default {
         agrandir: ["Agrandir", "sans-serif"],
       },
     },
-    plugins: [],
+    plugins: [require('tailwind-scrollbar-hide')],
   };
   

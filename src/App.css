@@ -44,11 +44,27 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
+  font-size: 16px;
 }
 
+/* Estilos al pasar el mouse */
 .navbar button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+/* Hacerlo responsivo en pantallas pequeñas */
+@media (max-width: 600px) {
+  .navbar {
+    gap: 4px;
+  }
+
+  .navbar button {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+}
+
 
 /* 🎥 Sección de Video */
 .video-section {

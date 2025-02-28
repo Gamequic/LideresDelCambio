@@ -1,13 +1,23 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+const fadeInAnimation = {
+  hidden: { opacity: 0, y: -15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
 
 export default function ProfileCard({ image, name, info }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div
+    <motion.div
       className="bg-primary relative bg-white shadow-lg rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 group min-h-84 min-w-72 flex flex-col items-center justify-center text-center"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      variants={fadeInAnimation}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
     >
       {/* 📌 Imagen completamente centrada */}
       <div className="flex justify-center mt-6 w-full">
@@ -31,6 +41,6 @@ export default function ProfileCard({ image, name, info }) {
       >
         <p className="text-xl">{info}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
