@@ -107,7 +107,7 @@ video {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  background: #212529;
+  /* background: #212529; */
   scroll-snap-align: start;
   width: 100vw;
 }

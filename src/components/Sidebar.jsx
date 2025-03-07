@@ -44,11 +44,8 @@ export default function Sidebar({ scrollToSection, sections }) {
         <nav className="flex flex-col space-y-4 p-6">
           <button onClick={() => { scrollToSection(sections.video); setIsOpen(false); }}>Inicio</button>
           <button onClick={() => { scrollToSection(sections.section1); setIsOpen(false); }}>Organización</button>
-          <button onClick={() => { scrollToSection(sections.colaboradores); setIsOpen(false); }}>Colaboradores</button>
           <button onClick={() => { scrollToSection(sections.aboutUs); setIsOpen(false); }}>Sobre nosotros</button>
           <button onClick={() => { scrollToSection(sections.section2); setIsOpen(false); }}>Redes Sociales</button>
-          <button onClick={() => { scrollToSection(sections.Noticias); setIsOpen(false); }}>Noticias</button>
-          <button onClick={() => { scrollToSection(sections.patrocinadores); setIsOpen(false); }}>Patrocinadores</button>
         </nav>
       </div>
 
