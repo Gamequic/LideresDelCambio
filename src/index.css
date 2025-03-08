@@ -34,6 +34,17 @@ h1 {
   line-height: 1.1;
 }
 
+/* Hacer que los párrafos sean más chicos en celular */
+p {
+  font-size: none;
+}
+
+@media (max-width: 450px) {
+  p {
+    font-size: 12px;
+  }
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

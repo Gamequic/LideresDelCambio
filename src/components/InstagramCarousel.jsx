@@ -53,6 +53,8 @@ const InstagramCarousel = () => {
   const instagramPosts = [
     "https://www.instagram.com/p/DFN9MCSJocH/",
     "https://www.instagram.com/p/DFwHHN9yVuV/",
+    "https://www.instagram.com/p/DGojE-7Oji9/",
+    "https://www.instagram.com/p/DFypPbey5oL/",
   ];
 
   const settings = {
@@ -86,7 +88,7 @@ const InstagramCarousel = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full h-[60vh]">
+    <div className="flex justify-center items-center w-[80vw] h-[60vh]">
       <Slider {...settings} className="w-full max-w-lg h-full">
         {instagramPosts.map((url, index) => (
           <div key={index} className="flex justify-center items-center h-full">

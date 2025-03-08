@@ -12,12 +12,8 @@ import "./App.css";
 // proyect imports
 import ProfileCard from "./components/ProfileCard";
 import InstagramCarousel from "./components/InstagramCarousel";
-import SponsorCard from "./components/Sponsor";
 import Sidebar from "./components/Sidebar";
-import News from "./components/News";
 import LoadingScreen from "./components/LoadingScreen";
-import AnimatedTitle from "./components/AnimatedTitle";
-import AnimatedP from "./components/AnimatedP";
 import SubtitleTypewriter from "./components/SubtitleTypewriter";
 
 const fadeInAnimation = {
@@ -47,7 +43,7 @@ function App() {
     <div className="app-container">
       <a
         href="https://wa.me/526568501265"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center gap-2 text-lg hover:bg-green-600 transition z-40"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center gap-2 text-lg hover:bg-green-600 transition z-30"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -64,7 +60,7 @@ function App() {
     <LoadingScreen isLoading={loading} />
 
       {/* 🎥 Sección del Video */}
-      <section ref={sections.video} className="video-section z-50">
+      <section ref={sections.video} className="video-section z-40">
         <div className="video-container">
           <video autoPlay loop muted playsInline className="background-video">
             <source src="/LideresDelCambio/assets/Background.mp4" type="video/mp4" />
@@ -104,17 +100,17 @@ function App() {
           >
             <div className="flex space-x-6 w-max sm:mx-0 lg:mx-auto">
               <ProfileCard
-                image="/LideresDelCambio/colaboladores/CarlosVillarreal.jpg"
+                image="/LideresDelCambio/Organizacion/CarlosVillarreal.jpg"
                 name="Carlos Villarreal"
                 info="Director de Lideres Del Cambio | Jefe Local de Intervención Comunitaria en Cruz Roja Juventud, Ciudad Juárez."
               />
               <ProfileCard
-                image="/LideresDelCambio/colaboladores/FidelTamayo.jpg"
+                image="/LideresDelCambio/Organizacion/FidelTamayo.jpg"
                 name="Fidel Tamayo"
                 info="Agente Comunitario para Red Mesa de Mujeres en Ciudad Juárez | Activista Social, Cordinador Operacional de Líderes del Cambio."
               />
               <ProfileCard
-                image="/LideresDelCambio/colaboladores/DemianCalleros.ico"
+                image="/LideresDelCambio/Organizacion/DemianCalleros.ico"
                 name="Demian Calleros"
                 info="Programador apasionado por construir soluciones escalables usando tecnología | Colaborador de Líderes del Cambio."
               />
@@ -149,7 +145,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/LideresDelCambio/colaboladores/CarlosVillarreal.jpg"
+          <img src="/LideresDelCambio/Media/Lideres.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Líderes del Cambio"
           />
@@ -182,7 +178,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/LideresDelCambio/colaboladores/CarlosVillarreal.jpg"
+          <img src="/LideresDelCambio/Media/44.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Evento en Planeación"
           />
@@ -205,7 +201,7 @@ function App() {
             whileInView="visible"
             viewport={{ once: true, amount: 1 }}
           >
-            El evento es posible gracias al apoyo de colaboradores, aliados estratégicos y voluntarios que han sumado esfuerzos para hacerlo realidad. Su compromiso ha sido clave para construir un espacio que no solo celebra logros, sino que también inspira nuevas generaciones a seguir actuando por un mundo más justo y sostenible.
+            El evento es posible gracias al apoyo de colaboradores, aliados estratégicos y voluntarios que han sumado esfuerzos para hacerlo realidad. Además, algunos colaboradores compartirán su experiencia en charlas, acompañadas de imágenes que reflejan sus mensajes. Su compromiso ha sido clave para inspirar a nuevas generaciones a seguir actuando por un mundo más justo y sostenible.
           </motion.p>
         </div>
         <motion.div 
@@ -215,7 +211,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/LideresDelCambio/colaboladores/CarlosVillarreal.jpg"
+          <img src="/LideresDelCambio/Media/Colaboradores.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Colaboradores en acción"
           />
@@ -248,7 +244,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/LideresDelCambio/colaboladores/CarlosVillarreal.jpg"
+          <img src="/LideresDelCambio/Media/Objetivo.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Futuro del liderazgo juvenil"
           />

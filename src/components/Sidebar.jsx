@@ -28,7 +28,7 @@ export default function Sidebar({ scrollToSection, sections }) {
       {/* Sidebar con z-20, fondo translúcido y desplazamiento del contenido */}
       <div
         id="sidebar"
-        className={`fixed top-0 left-0 h-screen w-64 bg-opacity-80 backdrop-blur-md text-white z-20 
+        className={`fixed top-0 left-0 h-screen w-64 bg-opacity-80 backdrop-blur-md text-white z-50 
                     transform ${isOpen ? "translate-x-0" : "-translate-x-full"} 
                     transition-transform duration-300 ease-in-out`}
       >
