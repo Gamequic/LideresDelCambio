@@ -1,6 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
-import { FaWhatsapp } from "react-icons/fa";
 import ReactGA from "react-ga4";
 import { motion } from "framer-motion";
 
@@ -10,6 +8,7 @@ ReactGA.send("pageview");
 import "./App.css";
 
 // proyect imports
+import WhatsAppButton from "./components/ContactUs";
 import ProfileCard from "./components/ProfileCard";
 import InstagramCarousel from "./components/InstagramCarousel";
 import Sidebar from "./components/Sidebar";
@@ -41,15 +40,8 @@ function App() {
 
   return (
     <div className="app-container">
-      <a
-        href="https://wa.me/526568501265"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center gap-2 text-lg hover:bg-green-600 transition z-30"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaWhatsapp size={24} />
-        Contáctanos
-      </a>
+      
+      <WhatsAppButton />
 
       {/* 🔘 Barra de Navegación */}
       <Sidebar
@@ -63,7 +55,7 @@ function App() {
       <section ref={sections.video} className="video-section z-40">
         <div className="video-container">
           <video autoPlay loop muted playsInline className="background-video">
-            <source src="/LideresDelCambio/assets/Background.mp4" type="video/mp4" />
+            <source src="/assets/Background.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="overlay">
@@ -100,17 +92,17 @@ function App() {
           >
             <div className="flex space-x-6 w-max sm:mx-0 lg:mx-auto">
               <ProfileCard
-                image="/LideresDelCambio/Organizacion/CarlosVillarreal.jpg"
+                image="/Organizacion/CarlosVillarreal.jpg"
                 name="Carlos Villarreal"
                 info="Director de Lideres Del Cambio | Jefe Local de Intervención Comunitaria en Cruz Roja Juventud, Ciudad Juárez."
               />
               <ProfileCard
-                image="/LideresDelCambio/Organizacion/FidelTamayo.jpg"
+                image="/Organizacion/FidelTamayo.jpg"
                 name="Fidel Tamayo"
                 info="Agente Comunitario para Red Mesa de Mujeres en Ciudad Juárez | Activista Social, Cordinador Operacional de Líderes del Cambio."
               />
               <ProfileCard
-                image="/LideresDelCambio/Organizacion/DemianCalleros.ico"
+                image="/Organizacion/DemianCalleros.ico"
                 name="Demian Calleros"
                 info="Programador apasionado por construir soluciones escalables usando tecnología | Colaborador de Líderes del Cambio."
               />
@@ -145,7 +137,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/LideresDelCambio/Media/Lideres.jpg"
+          <img src="/Media/Lideres.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Líderes del Cambio"
           />
@@ -178,7 +170,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/LideresDelCambio/Media/44.jpg"
+          <img src="/Media/44.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Evento en Planeación"
           />
@@ -211,7 +203,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/LideresDelCambio/Media/Colaboradores.jpg"
+          <img src="/Media/Colaboradores.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Colaboradores en acción"
           />
@@ -244,7 +236,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/LideresDelCambio/Media/Objetivo.jpg"
+          <img src="/Media/Objetivo.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Futuro del liderazgo juvenil"
           />

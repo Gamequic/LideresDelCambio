@@ -72,7 +72,7 @@ const InstagramCarousel = () => {
     { type: "embed", url: "https://www.instagram.com/p/DFwHHN9yVuV/" },
     { type: "embed", url: "https://www.instagram.com/p/DGojE-7Oji9/" },
     { type: "embed", url: "https://www.instagram.com/p/DFypPbey5oL/" },
-    { type: "image", url: "https://www.instagram.com/p/DE8gVNuSg2T/", image: "/LideresDelCambio/Media/Fidel.jpg" },
+    { type: "image", url: "https://www.instagram.com/p/DE8gVNuSg2T/", image: "/Media/Fidel.jpg" },
   ];
 
   const settings = {
