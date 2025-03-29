@@ -68,11 +68,15 @@ const InstagramImage = ({ url, image }) => {
 // 📌 Componente del carrusel de Instagram
 const InstagramCarousel = () => {
   const carouselItems = [
-    { type: "embed", url: "https://www.instagram.com/p/DFN9MCSJocH/" },
-    { type: "embed", url: "https://www.instagram.com/p/DFwHHN9yVuV/" },
-    { type: "embed", url: "https://www.instagram.com/p/DGojE-7Oji9/" },
+    { type: "embed", url: "https://www.instagram.com/p/DHhoOFVOkih/" },
+    { type: "embed", url: "https://www.instagram.com/p/DHi_dNBucdk/" },
+    { type: "embed", url: "https://www.instagram.com/p/DHtyY_zuWX5/" },
+    { type: "embed", url: "https://www.instagram.com/p/DHuh-rlOxhD/" },
+    { type: "embed", url: "https://www.instagram.com/p/DHroC2GS2iw/" },
+    { type: "embed", url: "https://www.instagram.com/p/DHsaO__uOQ5/" },
+    // { type: "embed", url: "https://www.instagram.com/p/DGojE-7Oji9/" },
     { type: "embed", url: "https://www.instagram.com/p/DFypPbey5oL/" },
-    { type: "image", url: "https://www.instagram.com/p/DE8gVNuSg2T/", image: "/Media/Fidel.jpg" },
+    // { type: "image", url: "https://www.instagram.com/p/DE8gVNuSg2T/", image: "/Media/Fidel.jpg" },
   ];
 
   const settings = {

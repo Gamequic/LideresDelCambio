@@ -55,17 +55,27 @@ function App() {
       <section ref={sections.video} className="video-section z-40">
         <div className="video-container">
           <video autoPlay loop muted playsInline className="background-video">
-            <source src="/assets/Background.mp4" type="video/mp4" />
+            <source 
+              preload="metadata"
+              src="/assets/media.mp4"
+              type="video/mp4; codecs=av01.0.04M.08"
+            />
+            <source 
+              src="/assets/media2.mp4" 
+              type="video/mp4" 
+            />
             Your browser does not support the video tag.
           </video>
           <div className="overlay">
-            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-10xl xl:text-[12rem] mainTitle">
-              Líderes del
-            </h1>
-            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-10xl xl:text-[12rem] TitleCambio font-breathing">
-              Cambio
-            </h1>
-            <SubtitleTypewriter></SubtitleTypewriter>
+            <div className="textOverlay">
+              <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-10xl xl:text-[12rem] mainTitle">
+                Líderes del
+              </h1>
+              <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-10xl xl:text-[12rem] TitleCambio font-breathing">
+                Cambio
+              </h1>
+            </div>
+            {/* <SubtitleTypewriter></SubtitleTypewriter> */}
           </div>
         </div>
       </section>
@@ -95,16 +105,19 @@ function App() {
                 image="/Organizacion/CarlosVillarreal.jpg"
                 name="Carlos Villarreal"
                 info="Director de Lideres Del Cambio | Jefe Local de Intervención Comunitaria en Cruz Roja Juventud, Ciudad Juárez."
+                username="carlosvillacorrall"
               />
               <ProfileCard
                 image="/Organizacion/FidelTamayo.jpg"
                 name="Fidel Tamayo"
-                info="Agente Comunitario para Red Mesa de Mujeres en Ciudad Juárez | Activista Social, Cordinador Operacional de Líderes del Cambio."
+                info="Agente Comunitario para Red Mesa de Mujeres en Ciudad Juárez | Activista Social, Colaborador Operacional de la 1ª Edición de Líderes del Cambio."
+                username="josefideltamayocortes"
               />
               <ProfileCard
-                image="/Organizacion/DemianCalleros.ico"
+                image="/Organizacion/DemianCalleros.jpg"
                 name="Demian Calleros"
                 info="Programador apasionado por construir soluciones escalables usando tecnología | Colaborador de Líderes del Cambio."
+                username="calleros.dev"
               />
             </div>
           </div>
@@ -236,7 +249,7 @@ function App() {
           whileInView="visible"
           viewport={{ once: true, amount: 1 }}
         >
-          <img src="/Media/Objetivo.jpg"
+          <img src="/Media/Liderazgo.jpg"
             className="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg object-cover"
             alt="Futuro del liderazgo juvenil"
           />

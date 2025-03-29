@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa"
 
 const fadeInAnimation = {
   hidden: { opacity: 0, y: -15 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
-export default function ProfileCard({ image, name, info }) {
+export default function ProfileCard({ image, name, info, username }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -32,6 +33,15 @@ export default function ProfileCard({ image, name, info }) {
       <h3 className="text-center text-xl font-semibold mt-4 text-gray-800">
         {name}
       </h3>
+      <a
+        href={`https://www.instagram.com/${username}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 text-pink-600 hover:text-pink-800 transition-colors z-10"
+      >
+        <FaInstagram className="text-2xl" />
+        <span className="text-lg font-semibold">@{username}</span>
+      </a>
 
       {/* 📌 Información emergente centrada */}
       <div
